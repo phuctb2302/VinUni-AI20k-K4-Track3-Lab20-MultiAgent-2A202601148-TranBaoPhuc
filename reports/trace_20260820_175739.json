@@ -1,0 +1,103 @@
+{
+  "run_timestamp": "2026-08-20T17:57:39.528446",
+  "query": "Research GraphRAG state-of-the-art",
+  "total_latency_seconds": 10.829681600007461,
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer",
+    "done"
+  ],
+  "iteration_count": 4,
+  "sources_gathered": 5,
+  "trace_events": [
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "iteration": 1,
+        "next": "researcher",
+        "has_sources": false,
+        "has_research": false,
+        "has_analysis": false,
+        "has_final": false
+      }
+    },
+    {
+      "name": "researcher_completed",
+      "payload": {
+        "sources_gathered": 5,
+        "notes_length": 381
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "iteration": 2,
+        "next": "analyst",
+        "has_sources": true,
+        "has_research": true,
+        "has_analysis": false,
+        "has_final": false
+      }
+    },
+    {
+      "name": "analyst_completed",
+      "payload": {
+        "analysis_length": 308
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "iteration": 3,
+        "next": "writer",
+        "has_sources": true,
+        "has_research": true,
+        "has_analysis": true,
+        "has_final": false
+      }
+    },
+    {
+      "name": "writer_completed",
+      "payload": {
+        "final_answer_length": 1483
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "iteration": 4,
+        "next": "done",
+        "has_sources": true,
+        "has_research": true,
+        "has_analysis": true,
+        "has_final": true
+      }
+    }
+  ],
+  "agent_results_summary": [
+    {
+      "agent": "researcher",
+      "content_length": 381,
+      "input_tokens": 1109,
+      "output_tokens": 77,
+      "cost_usd": 0.00021255
+    },
+    {
+      "agent": "analyst",
+      "content_length": 308,
+      "input_tokens": 156,
+      "output_tokens": 69,
+      "cost_usd": 6.48e-05
+    },
+    {
+      "agent": "writer",
+      "content_length": 1483,
+      "input_tokens": 293,
+      "output_tokens": 160,
+      "cost_usd": 0.00013995000000000001
+    }
+  ],
+  "errors": [],
+  "final_answer_length": 1483
+}
